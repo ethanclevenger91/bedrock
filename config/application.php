@@ -13,8 +13,8 @@ use Roots\WPConfig\Config;
 
 use function Env\env;
 
-// USE_ENV_ARRAY + CONVERT_* + STRIP_QUOTES
-Env\Env::$options = 31;
+// CONVERT_* + STRIP_QUOTES (default) + USE_ENV_ARRAY
+Env\Env::$options |= Env\Env::USE_ENV_ARRAY;
 
 /**
  * Directory containing all of the site's files
